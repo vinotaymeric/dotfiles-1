@@ -6,7 +6,8 @@ ZSH_THEME="robbyrussell"
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
 
-# (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
+# (macOS-only) Prevent  from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
+export PATH=/opt/homebrew/bin:$PATH
 export HOMEBREW_NO_ANALYTICS=1
 
 # Disable warning about insecure completion-dependent directories
@@ -58,7 +59,7 @@ type -a nvm > /dev/null && load-nvmrc
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# Store your own aliases in the ~/.aliases file and load the here.
+# Store your own aliases in thec file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # Encoding stuff for the terminal
@@ -70,3 +71,4 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+

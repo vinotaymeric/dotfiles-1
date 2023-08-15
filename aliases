@@ -1,9 +1,48 @@
-# Get External IP / Internet Speed
-alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+# Get External IP / local IPs
+alias ip="curl ipinfo.io/ip"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
 # Quickly serve the current directory as HTTP
-alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
 
-# NOTE: On Q3 2021, Le Wagon decided to change the Web Dev curriculum default text editor
-alias stt="echo 'Launching VS Code instead of Sublime Text... (cf ~/.aliases)' && code ."
+# Git
+alias gcm="git commit"
+alias gcom="git checkout master"
+alias pullb="git pull --rebase origin HEAD"
+alias gp="git push -f origin HEAD"
+alias gco="git checkout"
+alias od="OVERCOMMIT_DISABLE=1"
+alias gcm="git commit -S -m"
+alias rgcm="git commit -S -m"
+alias gst="git status -sb"
+alias gsl="git stash list"
+alias gamend="OVERCOMMIT_DISABLE=1 git commit --amend --no-edit"
+alias rgamend="git commit --amend --no-edit"
+
+# Dependencies
+alias bi="bundle install"
+alias yi="yarn install"
+
+# Files
+alias r="cd code/vinotaymeric/lifen"
+
+# Heroku
+alias hl="heroku local"
+
+# Docker
+alias dr="docker run"
+alias dc="docker-compose"
+alias dcu="docker-compose up"
+
+# Rails
+alias mig="bundle exec rake db:migrate && bundle exec rake db:test:prepare"
+alias base="bundle install && yarn && bundle exec rake db:migrate && bundle exec rake db:test:prepare && bundle exec rake after_party:run"
+alias tests="bundle exec spring rspec spec/"
+alias test="bundle exec rspec"
+alias stest="bundle exec spring rspec"
+
+# Other
+alias k="ssh-add -K ~/.ssh/id_ed25519"
+alias kill="lsof -ti:3000 -sTCP:LISTEN | xargs kill && lsof -ti:5000 -sTCP:LISTEN | xargs kill"
+alias hist="history | grep"
