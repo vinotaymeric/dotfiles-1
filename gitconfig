@@ -27,8 +27,9 @@
 
 [init]
   defaultBranch = master
+
 [user]
-	email = aymeric.vinot@gmail.com
+	email = aymeric.vinot@inato.com
 	name = Aymeric Vinot
 
 [commit]
