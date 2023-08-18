@@ -31,9 +31,12 @@
 [user]
 	email = aymeric.vinot@inato.com
 	name = Aymeric Vinot
+  signingkey = 2B0177A5DE3B7633
 
 [commit]
   gpgsign = true
 
 [gpg]
   program = gpg2
+
+  
